@@ -30,5 +30,11 @@ describe("Vampire", function() {
       expect(offspring2.creator).to.equal(rootVampire);
     });
 
+    it("should have unique children", () => {
+      let offspring3 = offspring1;
+      rootVampire.addOffspring(offspring3);
+      expect(rootVampire.offspring.length).to.equal(2);
+    })
+
   });
 });
